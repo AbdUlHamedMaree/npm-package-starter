@@ -1,0 +1,54 @@
+{
+  "name": "name",
+  "version": "0.0.0-semantic-release",
+  "private": false,
+  "description": "description",
+  "keywords": [],
+  "repository": "repository",
+  "license": "MIT",
+  "author": "author",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "node": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "bunx --bun lbundle",
+    "format": "bunx --bun prettier --write",
+    "lint": "eslint . --quiet",
+    "lint:fix": "bun run lint --fix",
+    "prepack": "bun run build",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@sebbo2002/semantic-release-jsr": "^1.0.0-dev.0",
+    "@types/bun": "^1.1.1",
+    "@types/node": "^20.12.8",
+    "eslint": "^8.57.0",
+    "eslint-config-react-ts-hero": "^1.0.0",
+    "husky": "^9.0.11",
+    "lbundle": "^1.1.2",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
