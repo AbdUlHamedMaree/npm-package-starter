@@ -2,6 +2,11 @@
 
 Starter repo for NPM package, all types of packages are handled using [`lbundle`](https://github.com/AbdUlHamedMaree/lbundle) ✨
 
+# Prepare
+
+- Make sure to add `NPM_TOKEN` secret in "Repository > Settings > Secrets and variables > Actions > New repository secret" to your action by adding it to your repo's secrets.
+- Update workflows permissions in "Repository > Settings > Actions > General > Workflow permissions" to be "Read and write permissions".
+
 # Usage
 
 ## Utility library
