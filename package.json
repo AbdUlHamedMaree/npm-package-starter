@@ -37,7 +37,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "bunx --bun rimraf dist",
     "build": "bunx --bun lbundle",
     "format": "bunx --bun prettier --write .",
     "lint": "eslint . --quiet",
