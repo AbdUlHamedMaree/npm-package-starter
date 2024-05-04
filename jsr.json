@@ -1,6 +1,6 @@
 {
   "$schema": "https://jsr.io/schema/config-file.v1.json",
-  "name": "@scope/name",
+  "name": "@<scope>/<name>",
   "version": "0.0.0-semantic-release",
   "exports": "./src/index.ts",
   "publish": {
