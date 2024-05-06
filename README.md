@@ -7,7 +7,20 @@ Starter repo for NPM package, all types of packages are handled using [`lbundle`
 - Make sure to add `NPM_TOKEN` secret in "Repository > Settings > Secrets and variables > Actions > New repository secret" to your action by adding it to your repo's secrets.
 - Update workflows permissions in "Repository > Settings > Actions > General > Workflow permissions" to be "Read and write permissions".
 - create the jsr first and link it to your github repo.
-- replace `<scope>`, `<name>`, `<description>` abd `<repo-name>` with proper values, and adjust `homepage`, `bugs`, `repository`, `author` and `contributors` with proper values.
+- replace `<scope>`, `<name>`, `<description>`, `<gh-user>` , `<user-name>`, `<email>`, `<user-page>` and `<repo-name>` with proper values, e.g.:
+
+```js
+{
+    scope: '@mrii',
+    name: 'package-name',
+    description: 'package-description',
+    'gh-user': 'AbdUlHamedMaree',
+    'user-name': 'AbdUlHameed Murie',
+    'email': 'hmidmrii@gmail.com',
+    'user-page': 'https://www.linkedin.com/in/abd-ul-hameed-maree/',
+    'repo-name': 'github-repo',
+}
+```
 
 # Usage
 
