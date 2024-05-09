@@ -4,9 +4,11 @@ Starter repo for NPM package, all types of packages are handled using [`lbundle`
 
 # Prepare
 
+- this starter relays on [bun](https://bun.sh/), so make sure to prepare it first.
+- don't update `eslint` or `eslint-config-react-ts-hero` since `eslint@9` doesn't support the old API and most eslint plugins are going to fail, wait until `eslint-config-react-ts-hero@2` fully released and then use it.
 - Make sure to add `NPM_TOKEN` secret in "Repository > Settings > Secrets and variables > Actions > New repository secret" to your action by adding it to your repo's secrets.
 - Update workflows permissions in "Repository > Settings > Actions > General > Workflow permissions" to be "Read and write permissions".
-- create the jsr first and link it to your github repo.
+- create the jsr package and link it to your github repo.
 - replace `<scope>`, `<name>`, `<description>`, `<gh-user>` , `<user-name>`, `<email>`, `<user-page>` and `<repo-name>` with proper values, e.g.:
 
 ```js
@@ -45,3 +47,13 @@ make sure to append the CSS entry in your `exports` field in your `package.json`
 `lbundle` is prepared to bundle react applications, just make sure to install `react` and `react-dom`, and append them to the `peerDependencies` field in your `package.json`.
 
 `lbundle` transforms JSX into either `jsx()` or `React.createElement()` according to your react version.
+
+# Guides
+
+## I don't want JSR
+
+just remove the following:
+
+- `jsr.json` file.
+- in `samantic-release.js`, remove the plugin `@sebbo2002/semantic-release-jsr` and remove `jsr.json` from `@samantic-release/git` config.
+- uninstall `@sebbo2002/semantic-release-jsr` (`bun remove @sebbo2002/semantic-release-jsr`)

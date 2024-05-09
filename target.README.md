@@ -60,12 +60,9 @@ npx jsr add -D <scope>/<name>
 
 ## ✨ Features
 
-## 🛣️ Roadmap
-
 ## 🧰 API
 
 ## 🔍 Options
 
-| key   | cli          | default | description               | version |
-| ----- | ------------ | :-----: | ------------------------- | ------- |
-| `cwd` | `---cwd, -c` |  `"."`  | root dir path of your lib | `1.0.0` |
+| key | default | description | version |
+| --- | :-----: | ----------- | ------- |
